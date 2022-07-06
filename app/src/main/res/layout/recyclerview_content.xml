@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/recyclerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:fontFamily="@font/cormorant_infant_semibold_italic"
+        android:justificationMode="inter_word"
+        android:text="@string/main_fragment_text"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/notification"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:backgroundTint="@color/white"
+            android:drawableTop="@drawable/ic_insurance"
+            android:text="@string/insurance"
+            android:textAlignment="center"
+             />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/search"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:backgroundTint="@color/white"
+            android:drawableTop="@drawable/ic_explore"
+            android:text="@string/explore"
+            android:textAlignment="center"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/why_us"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:backgroundTint="@color/white"
+            android:drawableTop="@drawable/ic_why_us"
+            android:text="@string/why_us"
+            android:textAlignment="center"
+           />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/email"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:backgroundTint="@color/white"
+            android:drawableTop="@drawable/ic_mail"
+            android:text="@string/email_us"
+            android:textAlignment="center"/>
+    </LinearLayout>
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
