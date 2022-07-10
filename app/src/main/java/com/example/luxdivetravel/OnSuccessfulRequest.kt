@@ -5,13 +5,16 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
+import com.example.luxdivetravel.databinding.FragmentOnSuccessfulRequestBinding
 
 
 class OnSuccessfulRequest : Fragment() {
+    private var _binding: FragmentOnSuccessfulRequestBinding? = null
+    private val binding get() = _binding!!
+    private var navController : NavController? = null
     companion object {
-        fun newInstance(): OnSuccessfulRequest {
-            return OnSuccessfulRequest()
-        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,10 +25,18 @@ class OnSuccessfulRequest : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_on_successful_request, container, false)
+    ): View {
+        _binding = FragmentOnSuccessfulRequestBinding.inflate(layoutInflater)
+        return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        navController = Navigation.findNavController(view)
+        super.onViewCreated(view, savedInstanceState)
+    }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+    }
 }

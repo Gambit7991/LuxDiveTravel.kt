@@ -12,5 +12,6 @@
         android:id="@+id/contact_us_item"
         android:enabled="true"
         android:icon="@drawable/ic_mail"
-        android:title="@string/email_us"/>
+        android:title="@string/email_us"
+        />
 </menu>

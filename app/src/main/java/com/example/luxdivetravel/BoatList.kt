@@ -9,9 +9,6 @@ import android.view.ViewGroup
 
 class BoatList : Fragment() {
     companion object {
-        fun newInstance(): BoatList {
-            return BoatList()
-        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +19,6 @@ class BoatList : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_boat_list, container, false)
     }
 

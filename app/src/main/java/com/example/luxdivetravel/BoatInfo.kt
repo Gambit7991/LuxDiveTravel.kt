@@ -7,17 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 
 
-/**
- * A simple [Fragment] subclass.
- * Use the [BoatInfo.newInstance] factory method to
- * create an instance of this fragment.
- */
 class BoatInfo : Fragment() {
 
     companion object {
-        fun newInstance(): BoatInfo {
-            return BoatInfo()
-        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

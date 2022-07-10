@@ -1,6 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/navigation_graph">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/mainPage">
 
+    <fragment
+        android:id="@+id/mainPage"
+        android:name="com.example.luxdivetravel.homePage.MainPage"
+        android:label="fragment_main_page"
+        tools:layout="@layout/fragment_main_page" >
+        <action
+            android:id="@+id/action_mainPage_to_getMoreInfo"
+            app:destination="@id/getMoreInfo" />
+        <action
+            android:id="@+id/action_mainPage_to_contuctUs"
+            app:destination="@id/contuctUs" />
+        <action
+            android:id="@+id/action_mainPage_to_destinationList"
+            app:destination="@id/destinationList" />
+        <action
+            android:id="@+id/action_mainPage_to_onSuccessfulRequest"
+            app:destination="@id/onSuccessfulRequest" />
+    </fragment>
+    <fragment
+        android:id="@+id/getMoreInfo"
+        android:name="com.example.luxdivetravel.homePage.buttons.GetMoreInfo"
+        android:label="fragment_get_more_info"
+        tools:layout="@layout/fragment_get_more_info" />
+    <fragment
+        android:id="@+id/contuctUs"
+        android:name="com.example.luxdivetravel.homePage.buttons.ContactUs"
+        android:label="fragment_contact_us"
+        tools:layout="@layout/fragment_contact_us" >
+        <action
+            android:id="@+id/action_contuctUs_to_onSuccessfulRequest"
+            app:destination="@id/onSuccessfulRequest" />
+    </fragment>
+    <fragment
+        android:id="@+id/destinationList"
+        android:name="com.example.luxdivetravel.DestinationList"
+        android:label="fragment_destination_list"
+        tools:layout="@layout/fragment_destination_list" >
+        <action
+            android:id="@+id/action_destinationList_to_contuctUs"
+            app:destination="@id/contuctUs" />
+        <action
+            android:id="@+id/action_destinationList_to_destinationInfo"
+            app:destination="@id/destinationInfo" />
+    </fragment>
+    <fragment
+        android:id="@+id/destinationInfo"
+        android:name="com.example.luxdivetravel.DestinationInfo"
+        android:label="fragment_destination_info"
+        tools:layout="@layout/fragment_destination_info" >
+        <action
+            android:id="@+id/action_destinationInfo_to_contuctUs"
+            app:destination="@id/contuctUs" />
+        <action
+            android:id="@+id/action_destinationInfo_to_boatList"
+            app:destination="@id/boatList" />
+    </fragment>
+    <fragment
+        android:id="@+id/boatList"
+        android:name="com.example.luxdivetravel.BoatList"
+        android:label="fragment_boat_list"
+        tools:layout="@layout/fragment_boat_list" >
+        <action
+            android:id="@+id/action_boatList_to_contuctUs"
+            app:destination="@id/contuctUs" />
+        <action
+            android:id="@+id/action_boatList_to_boatInfo"
+            app:destination="@id/boatInfo" />
+    </fragment>
+    <fragment
+        android:id="@+id/boatInfo"
+        android:name="com.example.luxdivetravel.BoatInfo"
+        android:label="fragment_boat_info"
+        tools:layout="@layout/fragment_boat_info" >
+        <action
+            android:id="@+id/action_boatInfo_to_contuctUs"
+            app:destination="@id/contuctUs" />
+    </fragment>
+    <fragment
+        android:id="@+id/onSuccessfulRequest"
+        android:name="com.example.luxdivetravel.OnSuccessfulRequest"
+        android:label="fragment_on_successful_request"
+        tools:layout="@layout/fragment_on_successful_request" >
+        <action
+            android:id="@+id/action_onSuccessfulRequest_to_mainPage"
+            app:destination="@id/mainPage" />
+    </fragment>
 </navigation>

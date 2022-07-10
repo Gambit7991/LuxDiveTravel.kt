@@ -8,9 +8,6 @@ import android.view.ViewGroup
 
 class DestinationInfo : Fragment() {
     companion object {
-        fun newInstance(): DestinationInfo {
-            return DestinationInfo()
-        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +19,6 @@ class DestinationInfo : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_destination_info, container, false)
     }
 
