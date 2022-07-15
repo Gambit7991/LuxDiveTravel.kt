@@ -13,21 +13,27 @@
         <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/drawable/ic_second_house.xml" value="0.23" />
         <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/drawable/ic_why_us.xml" value="0.1755" />
         <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/drawable/rounded_corner.xml" value="0.154" />
+        <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/drawable/rounded_text_borderless.xml" value="0.1" />
         <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/drawable/rounded_text_corner.xml" value="0.139" />
+        <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/drawable/rounded_text_with_border.xml" value="0.182" />
+        <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/drawable/rounded_top__text_borderless.xml" value="0.176" />
         <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/font/bangers.xml" value="0.27589743589743587" />
         <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/font/cormorant_infant_semibold_italic.xml" value="0.27589743589743587" />
         <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout-v21/fragment_main.xml" value="0.25" />
         <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/destination_info_content.xml" value="0.18518518518518517" />
         <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_boat_info.xml" value="0.2" />
         <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_boat_list.xml" value="0.25" />
+        <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_bottom_navigation_menu.xml" value="0.25" />
         <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_button_holder.xml" value="0.25" />
         <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_contact_us.xml" value="0.264" />
-        <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_destination_info.xml" value="0.25" />
-        <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_destination_list.xml" value="0.25" />
+        <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_content_destination_info.xml" value="0.1" />
+        <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_destination_info.xml" value="0.1" />
+        <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_destination_list.xml" value="0.264" />
         <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_get_more_info.xml" value="0.25" />
         <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_main.xml" value="0.20261713803292528" />
         <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_main_content.xml" value="0.264" />
-        <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_main_page.xml" value="0.264" />
+        <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_main_page.xml" value="0.1" />
         <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_must_to_be_renamed_explore.xml" value="0.25" />
         <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_must_to_be_renamed_insurance.xml" value="0.25" />
         <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_must_to_be_renamed_why_us.xml" value="0.25" />
@@ -39,8 +45,12 @@
         <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_temp_main_holder.xml" value="0.25" />
         <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_test_holder.xml" value="0.25" />
         <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_test_main.xml" value="0.264" />
+        <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/item_to_slide.xml" value="0.25" />
         <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/main_fragment_holder.xml" value="0.25" />
+        <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/main_page_content.xml" value="0.25" />
+        <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/motion_scene_destination_list.xml" value="0.1" />
         <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/recyclerview_content.xml" value="0.264" />
+        <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/slider_container.xml" value="0.264" />
         <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.264" />
       </map>
     </option>
@@ -50,5 +60,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.2" />
+      </ProjectState>
+    </option>
   </component>
 </project>

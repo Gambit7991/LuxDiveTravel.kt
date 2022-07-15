@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<menu
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/home_item"
@@ -12,6 +11,18 @@
         android:id="@+id/contact_us_item"
         android:enabled="true"
         android:icon="@drawable/ic_mail"
+        android:title="@string/email_us"
+        />
+    <item
+        android:id="@+id/facebook"
+        android:enabled="true"
+        android:icon="@drawable/ic_facebook"
+        android:title="@string/house"
+        />
+    <item
+        android:id="@+id/instagram"
+        android:enabled="true"
+        android:icon="@drawable/ic_instagram"
         android:title="@string/email_us"
         />
 </menu>
