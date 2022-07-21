@@ -1,11 +1,11 @@
-package com.example.luxdivetravel.mainPage.adapters
+package com.example.luxdivetravel.main.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.luxdivetravel.databinding.MainPageContentBinding
-import com.example.luxdivetravel.mainPage.adapters.MainContentAdapter.ViewHolder
+import com.example.luxdivetravel.main.adapters.MainContentAdapter.ViewHolder
 
 class MainContentAdapter() :
     RecyclerView.Adapter<ViewHolder>() {
@@ -20,9 +20,7 @@ class MainContentAdapter() :
         parent: ViewGroup,
         viewType: Int,
     ): ViewHolder {
-        val context = parent.context
-        val inflater = LayoutInflater.from(context)
-        _binding = MainPageContentBinding.inflate(inflater)
+        _binding = MainPageContentBinding.inflate(LayoutInflater.from(parent.context))
         return ViewHolder(binding.root)
     }
 

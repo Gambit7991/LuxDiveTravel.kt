@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/contact_us_form"
-    tools:context=".mainPage.buttons.ContactUs">
+    tools:context=".main.buttons.ContactUs">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/name_container"
@@ -17,13 +17,12 @@
         app:boxCornerRadiusBottomStart="15dp"
         app:boxCornerRadiusTopEnd="15dp"
         app:boxCornerRadiusTopStart="15dp"
+        app:boxStrokeWidth="0dp"
         app:helperText="@string/required"
         app:helperTextTextColor="@color/red"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:boxStrokeWidth="0dp"
-        >
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/name_edit_text"
@@ -46,14 +45,13 @@
         app:boxCornerRadiusBottomStart="15dp"
         app:boxCornerRadiusTopEnd="15dp"
         app:boxCornerRadiusTopStart="15dp"
+        app:boxStrokeWidth="0dp"
         app:helperText="@string/required"
         app:helperTextTextColor="@color/red"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name_container"
-        app:boxStrokeWidth="0dp"
-        >
+        app:layout_constraintTop_toBottomOf="@+id/name_container">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/email_edit_text"
@@ -75,23 +73,22 @@
         app:boxCornerRadiusBottomStart="15dp"
         app:boxCornerRadiusTopEnd="15dp"
         app:boxCornerRadiusTopStart="15dp"
+        app:boxStrokeWidth="0dp"
         app:counterEnabled="true"
         app:counterMaxLength="10"
         app:helperText="@string/required"
         app:helperTextTextColor="@color/red"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_text_container"
-        app:boxStrokeWidth="0dp"
-        >
+        app:layout_constraintTop_toBottomOf="@+id/email_text_container">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/phone_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_text_with_border"
             android:hint="Phone"
             android:inputType="textPersonName"
-            android:background="@drawable/rounded_text_with_border"
             android:lines="1"
             android:maxLength="10" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -107,6 +104,7 @@
         app:boxCornerRadiusBottomStart="15dp"
         app:boxCornerRadiusTopEnd="15dp"
         app:boxCornerRadiusTopStart="15dp"
+        app:boxStrokeWidth="0dp"
         app:counterEnabled="true"
         app:counterMaxLength="300"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -114,19 +112,17 @@
         app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/phone_text_container"
-        app:layout_constraintVertical_bias="0.0"
-        app:boxStrokeWidth="0dp"
-        >
+        app:layout_constraintVertical_bias="0.0">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/message_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textMultiLine"
-            android:scrollHorizontally="false"
-            android:lines="4"
             android:background="@drawable/rounded_text_with_border"
-            android:maxLength="300" />
+            android:inputType="textMultiLine"
+            android:lines="4"
+            android:maxLength="300"
+            android:scrollHorizontally="false" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button

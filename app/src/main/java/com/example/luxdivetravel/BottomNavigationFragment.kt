@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 
 
-class BottomNavigationMenu : Fragment() {
+class BottomNavigationFragment : Fragment() {
 
 
     override fun onCreateView(
@@ -15,6 +15,6 @@ class BottomNavigationMenu : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_bottom_navigation_menu, container, false)
+        return inflater.inflate(R.layout.fragment_bottom_navigation, container, false)
     }
 }

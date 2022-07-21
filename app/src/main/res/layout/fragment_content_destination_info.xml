@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".destinationInfoPage.ContentDestinationInfo"
+    tools:context=".destination.ContentDestinationInfo"
     android:fitsSystemWindows="true">
 
 
@@ -19,7 +19,7 @@
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
-            android:layout_height="220dp"
+            android:layout_height="300dp"
             app:contentScrim="@color/buttonOrange"
             app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
             app:toolbarId="@id/tool_bar">

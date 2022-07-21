@@ -5,8 +5,10 @@ import android.animation.ValueAnimator
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 import android.view.animation.AccelerateDecelerateInterpolator
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.example.luxdivetravel.databinding.ActivityMainBinding
@@ -17,11 +19,14 @@ class MainActivity : AppCompatActivity() {
 
     private var _binding: ActivityMainBinding? = null
     private val binding get() = _binding!!
+    private lateinit var vm: ViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        Log.e("ViewModel", "ActivityCreated")
+        vm = ViewModelProvider(this)[ViewModel::class.java]
     }
 
     companion object {
@@ -67,11 +72,11 @@ class MainActivity : AppCompatActivity() {
 
         fun viewPagerSettings(
             viewPager: ViewPager2,
-            slideShowType: String
+            slideShowType: String,
+            isAuto: Boolean
         ) {
             val sliderHandler = Handler(Looper.getMainLooper())
             viewPager.getChildAt(0).overScrollMode = RecyclerView.OVER_SCROLL_NEVER
-            val sliderRunnable = Runnable { fakeDrag(viewPager, true, 5000) }
             with(viewPager) {
                 when (slideShowType) {
                     PageTransformerEnum.CUBE_OUT.name -> setPageTransformer { page, position ->
@@ -90,13 +95,16 @@ class MainActivity : AppCompatActivity() {
                             if (position > 0) width * position else -width * position * 0.25f
                     }
                 }
-                registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
-                    override fun onPageSelected(position: Int) {
-                        super.onPageSelected(position)
-                        sliderHandler.removeCallbacks(sliderRunnable)
-                        sliderHandler.postDelayed(sliderRunnable, 4000)
-                    }
-                })
+                if (isAuto) {
+                    val sliderRunnable = Runnable { fakeDrag(viewPager, true, 5000) }
+                    registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+                        override fun onPageSelected(position: Int) {
+                            super.onPageSelected(position)
+                            sliderHandler.removeCallbacks(sliderRunnable)
+                            sliderHandler.postDelayed(sliderRunnable, 4000)
+                        }
+                    })
+                }
             }
         }
     }

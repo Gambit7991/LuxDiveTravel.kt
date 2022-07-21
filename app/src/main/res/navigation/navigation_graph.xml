@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainPage"
-        android:name="com.example.luxdivetravel.mainPage.MainPage"
+        android:name="com.example.luxdivetravel.main.MainPage"
         android:label="fragment_main_page"
         tools:layout="@layout/fragment_main_page" >
         <action
@@ -28,12 +28,12 @@
     </fragment>
     <fragment
         android:id="@+id/getMoreInfo"
-        android:name="com.example.luxdivetravel.mainPage.buttons.GetMoreInfo"
+        android:name="com.example.luxdivetravel.main.buttons.GetMoreInfo"
         android:label="fragment_get_more_info"
         tools:layout="@layout/fragment_get_more_info" />
     <fragment
         android:id="@+id/contuctUs"
-        android:name="com.example.luxdivetravel.mainPage.buttons.ContactUs"
+        android:name="com.example.luxdivetravel.main.buttons.ContactUs"
         android:label="fragment_contact_us"
         tools:layout="@layout/fragment_contact_us" >
         <action
@@ -42,7 +42,7 @@
     </fragment>
     <fragment
         android:id="@+id/destinationList"
-        android:name="com.example.luxdivetravel.DestinationList"
+        android:name="com.example.luxdivetravel.destination.DestinationList"
         android:label="fragment_destination_list"
         tools:layout="@layout/fragment_destination_list" >
         <action
@@ -51,10 +51,13 @@
         <action
             android:id="@+id/action_destinationList_to_destinationInfo"
             app:destination="@id/destinationInfo" />
+        <argument
+            android:name="CountryName"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/destinationInfo"
-        android:name="com.example.luxdivetravel.destinationInfoPage.DestinationInfo"
+        android:name="com.example.luxdivetravel.destination.DestinationInfo"
         android:label="fragment_destination_info"
         tools:layout="@layout/fragment_destination_info" >
         <action
@@ -66,7 +69,7 @@
     </fragment>
     <fragment
         android:id="@+id/boatList"
-        android:name="com.example.luxdivetravel.BoatList"
+        android:name="com.example.luxdivetravel.boat.BoatList"
         android:label="fragment_boat_list"
         tools:layout="@layout/fragment_boat_list" >
         <action
@@ -78,7 +81,7 @@
     </fragment>
     <fragment
         android:id="@+id/boatInfo"
-        android:name="com.example.luxdivetravel.BoatInfo"
+        android:name="com.example.luxdivetravel.boat.BoatInfo"
         android:label="fragment_boat_info"
         tools:layout="@layout/fragment_boat_info" >
         <action

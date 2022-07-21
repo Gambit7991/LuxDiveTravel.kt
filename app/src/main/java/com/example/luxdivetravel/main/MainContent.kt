@@ -1,4 +1,4 @@
-package com.example.luxdivetravel.mainPage
+package com.example.luxdivetravel.main
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import android.view.animation.AccelerateDecelerateInterpolator
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.luxdivetravel.databinding.FragmentMainContentBinding
-import com.example.luxdivetravel.mainPage.adapters.MainContentAdapter
+import com.example.luxdivetravel.main.adapters.MainContentAdapter
 import com.flaviofaria.kenburnsview.RandomTransitionGenerator
 
 class MainContent : Fragment() {

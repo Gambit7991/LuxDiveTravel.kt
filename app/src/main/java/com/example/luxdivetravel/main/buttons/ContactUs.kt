@@ -1,4 +1,4 @@
-package com.example.luxdivetravel.mainPage.buttons
+package com.example.luxdivetravel.main.buttons
 
 import android.app.AlertDialog
 import android.os.Bundle

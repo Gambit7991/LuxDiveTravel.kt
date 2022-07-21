@@ -1,16 +1,16 @@
-package com.example.luxdivetravel.destinationInfoPage
+package com.example.luxdivetravel.destination
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import com.example.luxdivetravel.R
+import com.example.luxdivetravel.ViewModel
 
-class DestinationInfo : Fragment() {
-    companion object {
-    }
-
+class DestinationListItemContent : Fragment() {
+    private val sharedViewModel: ViewModel by activityViewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -20,7 +20,8 @@ class DestinationInfo : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_destination_info, container, false)
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_destination_list_item_content, container, false)
     }
 
 

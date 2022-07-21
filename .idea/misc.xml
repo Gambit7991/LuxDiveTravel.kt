@@ -27,17 +27,19 @@
         <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_bottom_navigation_menu.xml" value="0.25" />
         <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_button_holder.xml" value="0.25" />
         <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_contact_us.xml" value="0.264" />
-        <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_content_destination_info.xml" value="0.1" />
-        <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_destination_info.xml" value="0.1" />
-        <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_destination_list.xml" value="0.264" />
+        <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_content_destination_info.xml" value="0.264" />
+        <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_destination_info.xml" value="0.264" />
+        <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_destination_list.xml" value="0.2" />
+        <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_destination_list_content.xml" value="0.2" />
+        <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_destination_list_item_content.xml" value="0.1" />
         <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_get_more_info.xml" value="0.25" />
         <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_main.xml" value="0.20261713803292528" />
         <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_main_content.xml" value="0.264" />
-        <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_main_page.xml" value="0.1" />
+        <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_main_page.xml" value="0.2" />
         <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_must_to_be_renamed_explore.xml" value="0.25" />
         <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_must_to_be_renamed_insurance.xml" value="0.25" />
         <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_must_to_be_renamed_why_us.xml" value="0.25" />
-        <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_on_successful_request.xml" value="0.264" />
+        <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_on_successful_request.xml" value="0.11578947368421053" />
         <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_request_sender.xml" value="0.142368533561351" />
         <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_review_slider.xml" value="0.25" />
         <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/fragment_t_e_s_t_m_a_i_n_f_r_a_g_m_e_n_t.xml" value="0.2359375" />
@@ -50,6 +52,7 @@
         <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/main_page_content.xml" value="0.25" />
         <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/motion_scene_destination_list.xml" value="0.1" />
         <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/recyclerview_content.xml" value="0.264" />
+        <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/review_item.xml" value="0.24615384615384617" />
         <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/layout/slider_container.xml" value="0.264" />
         <entry key="..\:/Users/radio/OneDrive/Desktop/LDTonKotlin/LDT/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.264" />
       </map>

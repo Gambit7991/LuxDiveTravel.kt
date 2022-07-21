@@ -5,25 +5,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".mainPage.MainPage"
-    tools:layout_editor_absoluteY="25dp">
+    tools:context=".main.MainPage"
+    >
 
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/button_holder_fragment"
-        android:name="com.example.luxdivetravel.mainPage.MainContent"
+        android:name="com.example.luxdivetravel.main.MainContent"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="10dp"
-        app:flow_horizontalAlign="center"
-        app:flow_verticalAlign="bottom"
         app:layout_constraintBottom_toTopOf="@+id/btn_get_destination_list"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.5"
-        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintHeight_percent="0.52"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <androidx.appcompat.widget.AppCompatButton
@@ -46,7 +42,7 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
         android:gravity="center"
         android:orientation="horizontal"
@@ -107,8 +103,7 @@
         android:layout_height="200dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintStart_toStartOf="parent">
 
     </androidx.viewpager2.widget.ViewPager2>
 </androidx.constraintlayout.widget.ConstraintLayout>
