@@ -5,33 +5,72 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".destination.DestinationList"
-    >
-
+    tools:context=".presentation.destination.DestinationList">
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView3"
-        android:name="com.example.luxdivetravel.destination.DestinationListContent"
+        android:id="@+id/contentContainer"
+        android:name="com.example.luxdivetravel.presentation.destination.DestinationListContent"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.96"
-        app:layout_constraintWidth_percent="1"
-        app:layout_constraintBottom_toTopOf="@+id/fragmentContainerView2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.95"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="1" />
 
-
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView2"
-        android:name="com.example.luxdivetravel.BottomNavigationFragment"
-        android:layout_width="0dp"
+    <ImageButton
+        android:id="@+id/btn_home"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
-        app:layout_constraintWidth_percent="1"
-        app:layout_constraintHeight_percent="0.04"
-        android:layout_gravity="bottom"
+        app:layout_constraintHeight_percent="0.05"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/ic_house"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contentContainer" />
+
+    <ImageButton
+        android:id="@+id/btn_instagram"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.05"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:backgroundTint="@color/white"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_instagram"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_facebook"
+        app:layout_constraintStart_toEndOf="@+id/btn_home"
+        app:layout_constraintTop_toBottomOf="@+id/contentContainer" />
+
+    <ImageButton
+        android:id="@+id/btn_facebook"
+        android:layout_width="50dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="50dp"
+        android:backgroundTint="@color/white"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_facebook"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_contact_us"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@+id/btn_home"
+        app:layout_constraintTop_toBottomOf="@+id/contentContainer"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/btn_contact_us"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.05"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/ic_mail"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/contentContainer" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".main.MainContent">
+    tools:context=".presentation.main.MainContent">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -16,6 +16,7 @@
             android:layout_height="match_parent">
 
             <ImageView
+                android:id="@+id/entirePicture"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fitsSystemWindows="true"
@@ -25,7 +26,7 @@
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/fragment_container_view_form"
-                android:name="com.example.luxdivetravel.main.buttons.ContactUs"
+                android:name="com.example.luxdivetravel.presentation.contactUs.ContactUs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center" />

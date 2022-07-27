@@ -7,15 +7,12 @@
 
     <fragment
         android:id="@+id/mainPage"
-        android:name="com.example.luxdivetravel.main.MainPage"
+        android:name="com.example.luxdivetravel.presentation.main.MainPage"
         android:label="fragment_main_page"
         tools:layout="@layout/fragment_main_page" >
         <action
             android:id="@+id/action_mainPage_to_getMoreInfo"
             app:destination="@id/getMoreInfo" />
-        <action
-            android:id="@+id/action_mainPage_to_contuctUs"
-            app:destination="@id/contuctUs" />
         <action
             android:id="@+id/action_mainPage_to_destinationList"
             app:destination="@id/destinationList" />
@@ -28,12 +25,12 @@
     </fragment>
     <fragment
         android:id="@+id/getMoreInfo"
-        android:name="com.example.luxdivetravel.main.buttons.GetMoreInfo"
+        android:name="com.example.luxdivetravel.presentation.main.GetMoreInfo"
         android:label="fragment_get_more_info"
         tools:layout="@layout/fragment_get_more_info" />
     <fragment
-        android:id="@+id/contuctUs"
-        android:name="com.example.luxdivetravel.main.buttons.ContactUs"
+        android:id="@+id/contactUs"
+        android:name="com.example.luxdivetravel.presentation.contactUs.ContactUs"
         android:label="fragment_contact_us"
         tools:layout="@layout/fragment_contact_us" >
         <action
@@ -42,59 +39,84 @@
     </fragment>
     <fragment
         android:id="@+id/destinationList"
-        android:name="com.example.luxdivetravel.destination.DestinationList"
+        android:name="com.example.luxdivetravel.presentation.destination.DestinationList"
         android:label="fragment_destination_list"
         tools:layout="@layout/fragment_destination_list" >
-        <action
-            android:id="@+id/action_destinationList_to_contuctUs"
-            app:destination="@id/contuctUs" />
         <action
             android:id="@+id/action_destinationList_to_destinationInfo"
             app:destination="@id/destinationInfo" />
         <argument
             android:name="CountryName"
             app:argType="string" />
+        <action
+            android:id="@+id/action_destinationList_to_mainPage"
+            app:destination="@id/mainPage" />
+        <action
+            android:id="@+id/action_destinationList_to_onSuccessfulRequest"
+            app:destination="@id/onSuccessfulRequest" />
+        <action
+            android:id="@+id/action_destinationList_to_mainPage2"
+            app:destination="@id/mainPage" />
     </fragment>
     <fragment
         android:id="@+id/destinationInfo"
-        android:name="com.example.luxdivetravel.destination.DestinationInfo"
+        android:name="com.example.luxdivetravel.presentation.destination.DestinationInfo"
         android:label="fragment_destination_info"
         tools:layout="@layout/fragment_destination_info" >
         <action
-            android:id="@+id/action_destinationInfo_to_contuctUs"
-            app:destination="@id/contuctUs" />
-        <action
             android:id="@+id/action_destinationInfo_to_boatList"
             app:destination="@id/boatList" />
+        <action
+            android:id="@+id/action_destinationInfo_to_mainPage"
+            app:destination="@id/mainPage" />
+        <action
+            android:id="@+id/action_destinationInfo_to_onSuccessfulRequest"
+            app:destination="@id/onSuccessfulRequest" />
+        <action
+            android:id="@+id/action_destinationInfo_to_destinationList"
+            app:destination="@id/destinationList" />
     </fragment>
     <fragment
         android:id="@+id/boatList"
-        android:name="com.example.luxdivetravel.boat.BoatList"
+        android:name="com.example.luxdivetravel.presentation.boat.BoatList"
         android:label="fragment_boat_list"
         tools:layout="@layout/fragment_boat_list" >
         <action
-            android:id="@+id/action_boatList_to_contuctUs"
-            app:destination="@id/contuctUs" />
-        <action
             android:id="@+id/action_boatList_to_boatInfo"
             app:destination="@id/boatInfo" />
+        <action
+            android:id="@+id/action_boatList_to_mainPage"
+            app:destination="@id/mainPage" />
+        <action
+            android:id="@+id/action_boatList_to_onSuccessfulRequest"
+            app:destination="@id/onSuccessfulRequest" />
+
     </fragment>
     <fragment
         android:id="@+id/boatInfo"
-        android:name="com.example.luxdivetravel.boat.BoatInfo"
+        android:name="com.example.luxdivetravel.presentation.boat.BoatInfo"
         android:label="fragment_boat_info"
         tools:layout="@layout/fragment_boat_info" >
         <action
-            android:id="@+id/action_boatInfo_to_contuctUs"
-            app:destination="@id/contuctUs" />
+            android:id="@+id/action_boatInfo_to_onSuccessfulRequest"
+            app:destination="@id/onSuccessfulRequest" />
+        <action
+            android:id="@+id/action_boatInfo_to_mainPage"
+            app:destination="@id/mainPage" />
+        <action
+            android:id="@+id/action_boatInfo_to_onSuccessfulRequest2"
+            app:destination="@id/onSuccessfulRequest" />
     </fragment>
     <fragment
         android:id="@+id/onSuccessfulRequest"
-        android:name="com.example.luxdivetravel.OnSuccessfulRequest"
+        android:name="com.example.luxdivetravel.presentation.contactUs.OnSuccessfulRequest"
         android:label="fragment_on_successful_request"
         tools:layout="@layout/fragment_on_successful_request" >
         <action
             android:id="@+id/action_onSuccessfulRequest_to_mainPage"
+            app:destination="@id/mainPage" />
+        <action
+            android:id="@+id/action_onSuccessfulRequest_to_mainPage2"
             app:destination="@id/mainPage" />
     </fragment>
 </navigation>

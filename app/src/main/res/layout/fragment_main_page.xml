@@ -5,13 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".main.MainPage"
+    tools:context=".presentation.main.MainPage"
+    android:tag="main_fragment"
     >
 
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/button_holder_fragment"
-        android:name="com.example.luxdivetravel.main.MainContent"
+        android:name="com.example.luxdivetravel.presentation.main.MainContent"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="10dp"
