@@ -4,5 +4,6 @@ open class Product(
     val name: String,
     val about: String,
     val id: Int,
-    val picture: String
+    val mainPicture: String,
+    val pictureList: ArrayList<String>
 )

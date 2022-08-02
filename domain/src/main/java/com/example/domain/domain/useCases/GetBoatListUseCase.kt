@@ -7,6 +7,5 @@ class GetBoatListUseCase(private val boatRepository: BoatRepository) {
 
     fun execute(): ArrayList<Boat> {
         return boatRepository.getBoatList()
-
     }
 }

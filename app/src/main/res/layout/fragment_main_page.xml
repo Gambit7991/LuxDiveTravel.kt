@@ -6,19 +6,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".presentation.main.MainPage"
-    android:tag="main_fragment"
-    >
+    android:tag="main_fragment">
 
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/button_holder_fragment"
         android:name="com.example.luxdivetravel.presentation.main.MainContent"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginBottom="10dp"
         app:layout_constraintBottom_toTopOf="@+id/btn_get_destination_list"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.52"
+        app:layout_constraintHeight_percent="0.53"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -93,7 +92,7 @@
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:backgroundTint="@color/white"
-            android:drawableTop="@drawable/ic_mail"
+            android:drawableTop="@drawable/ic_baseline_email_mainpage_24"
             android:text="@string/email_us"
             android:textAlignment="center" />
     </LinearLayout>

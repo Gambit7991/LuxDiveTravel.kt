@@ -6,16 +6,14 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.os.PersistableBundle
-import android.util.Log
 import android.view.animation.AccelerateDecelerateInterpolator
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.example.luxdivetravel.PageTransformerEnum
-import com.example.luxdivetravel.viewmodel.ViewModel
-import com.example.luxdivetravel.viewmodel.ViewModelFactory
 import com.example.luxdivetravel.databinding.ActivityMainBinding
+import com.example.luxdivetravel.viewmodel.MainViewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 import kotlin.math.abs
 import kotlin.math.min
 
@@ -23,15 +21,12 @@ class MainActivity : AppCompatActivity() {
 
     private var _binding: ActivityMainBinding? = null
     private val binding get() = _binding!!
-    private lateinit var vm: ViewModel
+    private val vm by viewModel<MainViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        Log.e("ViewModel", "ActivityCreated")
-        vm = ViewModelProvider(this, ViewModelFactory(this))[ViewModel::class.java]
-
     }
 
     override fun onSaveInstanceState(outState: Bundle, outPersistentState: PersistableBundle) {

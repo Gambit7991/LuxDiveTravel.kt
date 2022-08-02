@@ -2,6 +2,8 @@ package com.example.luxdivetravel.presentation.contactUs
 
 import android.app.AlertDialog
 import android.os.Bundle
+import android.os.StrictMode
+import android.os.StrictMode.ThreadPolicy
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Patterns
@@ -10,20 +12,21 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.activityViewModels
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.domain.domain.models.ContactUsForm
+import com.example.domain.domain.useCases.SendContactFormUseCase
 import com.example.luxdivetravel.R
-import com.example.luxdivetravel.viewmodel.ViewModel
 import com.example.luxdivetravel.databinding.FragmentContactUsBinding
+import com.example.luxdivetravel.viewmodel.MainViewModel
+import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 
 class ContactUs : Fragment(), View.OnClickListener {
     private var _binding: FragmentContactUsBinding? = null
     private val binding get() = _binding!!
     private var navController: NavController? = null
-    private val sharedViewModel: ViewModel by activityViewModels()
+    private val sharedMainViewModel by sharedViewModel<MainViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -40,7 +43,7 @@ class ContactUs : Fragment(), View.OnClickListener {
         phoneTextChangeListener()
         nameTextChangeListener()
         binding.btnSubmitForm.setOnClickListener(this)
-        sharedViewModel.wayLive.observe(viewLifecycleOwner) {
+        sharedMainViewModel.wayLive.observe(viewLifecycleOwner) {
             with(binding) {
                 if (it.contactUsForm.name.isNotEmpty()) {
                     nameEditText.setText(it.contactUsForm.name)
@@ -59,10 +62,10 @@ class ContactUs : Fragment(), View.OnClickListener {
     }
 
     private fun replaceFragment() {
-        parentFragmentManager.beginTransaction().remove(FragmentManager.findFragment(this.view!!))
+        parentFragmentManager.beginTransaction()
+            .remove(FragmentManager.findFragment(this.view!!))
             .commit()
     }
-
 
     private fun btnSubmitForm(): Boolean {
         val validEmail = binding.emailTextContainer.helperText == null
@@ -139,7 +142,7 @@ class ContactUs : Fragment(), View.OnClickListener {
         if (phoneNumber.length < 10) {
             return "Invalid Phone Number(Must contains 10 digits)"
         }
-        if (!phoneNumber.matches(getString(R.string.regex_phone_number_length).toRegex())) {
+        if (!phoneNumber.matches(getString(R.string.regex_all_numbers).toRegex())) {
             return "Invalid Phone Number(Must contains digits only)"
         }
         return null
@@ -170,20 +173,33 @@ class ContactUs : Fragment(), View.OnClickListener {
     override fun onClick(v: View?) {
         when (v!!.id) {
             binding.btnSubmitForm.id -> {
-                if (btnSubmitForm()) replaceFragment()
+                if (btnSubmitForm()) {
+                    binding.emailEditText.setText("")
+                    binding.nameEditText.setText("")
+                    binding.phoneEditText.setText("")
+                    binding.messageEditText.setText("")
+                    replaceFragment()
+                    StrictMode.setThreadPolicy(ThreadPolicy.Builder().permitAll().build())
+                    //TODO: needs to set up email account
+                    val temp = SendContactFormUseCase()
+//                    temp.execute(getContactUsForm())
+                    sharedMainViewModel.setDisabled(boolean = false)
+                }
             }
         }
     }
 
     override fun onPause() {
         super.onPause()
-        sharedViewModel.saveContactUsFormUseCase(
-            ContactUsForm(
-                name = binding.nameEditText.text.toString(),
-                email = binding.emailEditText.text.toString(),
-                phoneNumber = binding.phoneEditText.text.toString(),
-                message = binding.messageEditText.text.toString()
-            )
+        sharedMainViewModel.saveContactUsFormUseCase(getContactUsForm())
+    }
+
+    private fun getContactUsForm(): ContactUsForm {
+        return ContactUsForm(
+            name = binding.nameEditText.text.toString(),
+            email = binding.emailEditText.text.toString(),
+            phoneNumber = binding.phoneEditText.text.toString(),
+            message = binding.messageEditText.text.toString()
         )
     }
 

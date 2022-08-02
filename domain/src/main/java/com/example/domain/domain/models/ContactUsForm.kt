@@ -7,4 +7,6 @@ class ContactUsForm(
     var message: String,
 ) {
     constructor() : this(name = "", email = "", phoneNumber = "", message = "")
+
+
 }

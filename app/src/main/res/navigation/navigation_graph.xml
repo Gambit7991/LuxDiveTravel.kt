@@ -15,13 +15,18 @@
             app:destination="@id/getMoreInfo" />
         <action
             android:id="@+id/action_mainPage_to_destinationList"
-            app:destination="@id/destinationList" />
+            app:destination="@id/destinationList"
+            app:enterAnim="@anim/top_in"
+            app:exitAnim="@anim/bottom_out"
+            app:popEnterAnim="@anim/top_pop_in"
+            app:popExitAnim="@anim/bottom_pop_out" />
         <action
             android:id="@+id/action_mainPage_to_onSuccessfulRequest"
-            app:destination="@id/onSuccessfulRequest" />
-        <action
-            android:id="@+id/action_mainPage_to_destinationInfo"
-            app:destination="@id/destinationInfo" />
+            app:destination="@id/onSuccessfulRequest"
+            app:enterAnim="@anim/left_in"
+            app:exitAnim="@anim/left_out"
+            app:popEnterAnim="@anim/left_pop_in"
+            app:popExitAnim="@anim/left_pop_out" />
     </fragment>
     <fragment
         android:id="@+id/getMoreInfo"
@@ -29,34 +34,32 @@
         android:label="fragment_get_more_info"
         tools:layout="@layout/fragment_get_more_info" />
     <fragment
-        android:id="@+id/contactUs"
-        android:name="com.example.luxdivetravel.presentation.contactUs.ContactUs"
-        android:label="fragment_contact_us"
-        tools:layout="@layout/fragment_contact_us" >
-        <action
-            android:id="@+id/action_contuctUs_to_onSuccessfulRequest"
-            app:destination="@id/onSuccessfulRequest" />
-    </fragment>
-    <fragment
         android:id="@+id/destinationList"
         android:name="com.example.luxdivetravel.presentation.destination.DestinationList"
         android:label="fragment_destination_list"
         tools:layout="@layout/fragment_destination_list" >
         <action
             android:id="@+id/action_destinationList_to_destinationInfo"
-            app:destination="@id/destinationInfo" />
-        <argument
-            android:name="CountryName"
-            app:argType="string" />
-        <action
-            android:id="@+id/action_destinationList_to_mainPage"
-            app:destination="@id/mainPage" />
+            app:destination="@id/destinationInfo"
+            app:enterAnim="@anim/left_in"
+            app:exitAnim="@anim/left_out"
+            app:popEnterAnim="@anim/left_pop_in"
+            app:popExitAnim="@anim/left_pop_out" />
+
         <action
             android:id="@+id/action_destinationList_to_onSuccessfulRequest"
-            app:destination="@id/onSuccessfulRequest" />
+            app:destination="@id/onSuccessfulRequest"
+            app:enterAnim="@anim/left_in"
+            app:exitAnim="@anim/left_out"
+            app:popEnterAnim="@anim/left_pop_in"
+            app:popExitAnim="@anim/left_pop_out" />
         <action
-            android:id="@+id/action_destinationList_to_mainPage2"
-            app:destination="@id/mainPage" />
+            android:id="@+id/action_destinationList_to_mainPage"
+            app:destination="@id/mainPage"
+            app:enterAnim="@anim/top_pop_in"
+            app:exitAnim="@anim/bottom_pop_out"
+            app:popEnterAnim="@anim/top_pop_in"
+            app:popExitAnim="@anim/bottom_pop_out" />
     </fragment>
     <fragment
         android:id="@+id/destinationInfo"
@@ -65,16 +68,25 @@
         tools:layout="@layout/fragment_destination_info" >
         <action
             android:id="@+id/action_destinationInfo_to_boatList"
-            app:destination="@id/boatList" />
+            app:destination="@id/boatList"
+            app:enterAnim="@anim/top_in"
+            app:exitAnim="@anim/bottom_out"
+            app:popEnterAnim="@anim/top_pop_in"
+            app:popExitAnim="@anim/bottom_pop_out" />
         <action
             android:id="@+id/action_destinationInfo_to_mainPage"
-            app:destination="@id/mainPage" />
+            app:destination="@id/mainPage"
+            app:enterAnim="@anim/top_pop_in"
+            app:exitAnim="@anim/bottom_pop_out"
+            app:popEnterAnim="@anim/top_pop_in"
+            app:popExitAnim="@anim/bottom_pop_out" />
         <action
             android:id="@+id/action_destinationInfo_to_onSuccessfulRequest"
-            app:destination="@id/onSuccessfulRequest" />
-        <action
-            android:id="@+id/action_destinationInfo_to_destinationList"
-            app:destination="@id/destinationList" />
+            app:destination="@id/onSuccessfulRequest"
+            app:enterAnim="@anim/left_in"
+            app:exitAnim="@anim/left_out"
+            app:popEnterAnim="@anim/left_pop_in"
+            app:popExitAnim="@anim/left_pop_out" />
     </fragment>
     <fragment
         android:id="@+id/boatList"
@@ -83,13 +95,25 @@
         tools:layout="@layout/fragment_boat_list" >
         <action
             android:id="@+id/action_boatList_to_boatInfo"
-            app:destination="@id/boatInfo" />
+            app:destination="@id/boatInfo"
+            app:enterAnim="@anim/left_in"
+            app:exitAnim="@anim/left_out"
+            app:popEnterAnim="@anim/left_pop_in"
+            app:popExitAnim="@anim/left_pop_out" />
         <action
             android:id="@+id/action_boatList_to_mainPage"
-            app:destination="@id/mainPage" />
+            app:destination="@id/mainPage"
+            app:enterAnim="@anim/top_pop_in"
+            app:exitAnim="@anim/bottom_pop_out"
+            app:popEnterAnim="@anim/top_pop_in"
+            app:popExitAnim="@anim/bottom_pop_out" />
         <action
             android:id="@+id/action_boatList_to_onSuccessfulRequest"
-            app:destination="@id/onSuccessfulRequest" />
+            app:destination="@id/onSuccessfulRequest"
+            app:enterAnim="@anim/left_in"
+            app:exitAnim="@anim/left_out"
+            app:popEnterAnim="@anim/left_pop_in"
+            app:popExitAnim="@anim/left_pop_out" />
 
     </fragment>
     <fragment
@@ -98,25 +122,32 @@
         android:label="fragment_boat_info"
         tools:layout="@layout/fragment_boat_info" >
         <action
-            android:id="@+id/action_boatInfo_to_onSuccessfulRequest"
-            app:destination="@id/onSuccessfulRequest" />
-        <action
             android:id="@+id/action_boatInfo_to_mainPage"
-            app:destination="@id/mainPage" />
+            app:destination="@id/mainPage"
+            app:enterAnim="@anim/top_pop_in"
+            app:exitAnim="@anim/bottom_pop_out"
+            app:popEnterAnim="@anim/top_pop_in"
+            app:popExitAnim="@anim/bottom_pop_out" />
         <action
-            android:id="@+id/action_boatInfo_to_onSuccessfulRequest2"
-            app:destination="@id/onSuccessfulRequest" />
+            android:id="@+id/action_boatInfo_to_onSuccessfulRequest"
+            app:destination="@id/onSuccessfulRequest"
+            app:enterAnim="@anim/left_in"
+            app:exitAnim="@anim/left_out"
+            app:popEnterAnim="@anim/left_pop_in"
+            app:popExitAnim="@anim/left_pop_out" />
     </fragment>
     <fragment
         android:id="@+id/onSuccessfulRequest"
         android:name="com.example.luxdivetravel.presentation.contactUs.OnSuccessfulRequest"
         android:label="fragment_on_successful_request"
         tools:layout="@layout/fragment_on_successful_request" >
+
         <action
             android:id="@+id/action_onSuccessfulRequest_to_mainPage"
-            app:destination="@id/mainPage" />
-        <action
-            android:id="@+id/action_onSuccessfulRequest_to_mainPage2"
-            app:destination="@id/mainPage" />
+            app:destination="@id/mainPage"
+            app:enterAnim="@anim/left_in"
+            app:exitAnim="@anim/bottom_out"
+            app:popEnterAnim="@anim/left_pop_in"
+            app:popExitAnim="@anim/left_pop_out" />
     </fragment>
 </navigation>

@@ -9,6 +9,26 @@ plugins {
 android {
     compileSdk 32
 
+    packagingOptions {
+
+        resources{
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+        pickFirst "META-INF/DEPENDENCIES"
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.md'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude("META-INF/*.kotlin_module")
+        exclude 'META-INF/NOTICE.md'
+        exclude 'META-INF/LICENSE.md'
+    }
+
     defaultConfig {
         applicationId "com.example.luxdivetravel"
         minSdk 21
@@ -25,6 +45,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -76,6 +97,10 @@ dependencies {
 
     implementation "androidx.activity:activity-ktx:1.5.0"
     implementation "androidx.fragment:fragment-ktx:1.5.0"
+
+    implementation "io.insert-koin:koin-core:3.1.2"
+    implementation "io.insert-koin:koin-android:3.1.2"
+    implementation "io.insert-koin:koin-test:3.1.2"
 
     implementation project (path: ':data')
     implementation project (path: ':domain')

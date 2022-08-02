@@ -7,10 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import com.example.luxdivetravel.R
-import com.example.luxdivetravel.viewmodel.ViewModel
+import com.example.luxdivetravel.viewmodel.MainViewModel
 
 class DestinationListItemContent : Fragment() {
-    private val sharedViewModel: ViewModel by activityViewModels()
+    private val sharedMainViewModel: MainViewModel by activityViewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

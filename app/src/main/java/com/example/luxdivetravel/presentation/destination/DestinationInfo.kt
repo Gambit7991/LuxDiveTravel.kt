@@ -12,7 +12,7 @@ import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import com.example.luxdivetravel.PageTransformerEnum
 import com.example.luxdivetravel.R
-import com.example.luxdivetravel.viewmodel.ViewModel
+import com.example.luxdivetravel.viewmodel.MainViewModel
 import com.example.luxdivetravel.databinding.FragmentDestinationInfoBinding
 import com.example.luxdivetravel.presentation.MainActivity
 import com.example.luxdivetravel.presentation.adapters.SliderAdapter
@@ -22,7 +22,7 @@ class DestinationInfo : Fragment(), View.OnClickListener {
     private var _binding: FragmentDestinationInfoBinding? = null
     private val binding get() = _binding!!
     private var navController: NavController? = null
-    private val sharedViewModel: ViewModel by activityViewModels()
+    private val sharedMainViewModel: MainViewModel by activityViewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -64,7 +64,7 @@ class DestinationInfo : Fragment(), View.OnClickListener {
             viewLifecycleOwner,
             object : OnBackPressedCallback(true) {
                 override fun handleOnBackPressed() {
-                    sharedViewModel.popChoiceUseCase()
+                    sharedMainViewModel.popChoiceUseCase()
                     super.setEnabled(false)
                     findNavController().popBackStack()
                 }

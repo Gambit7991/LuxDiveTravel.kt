@@ -5,7 +5,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.domain.domain.models.Country
 import com.example.domain.domain.models.Product
 import com.example.luxdivetravel.databinding.FragmentDestinationListItemContentBinding
 import kotlinx.android.synthetic.main.fragment_destination_list_item_content.view.*
@@ -31,7 +30,7 @@ class RecyclerViewAdapter(private val countryList: List<Product>) :
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         Glide.with(holder.itemView)
-            .load(countryList[position].picture)
+            .load(countryList[position].mainPicture)
             .into(holder.itemView.imageView)
         holder.itemView.item_content.setOnClickListener {
             onItemClick!!.invoke(countryList[position])

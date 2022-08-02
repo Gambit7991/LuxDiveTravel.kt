@@ -1,31 +1,39 @@
 package com.example.luxdivetravel.viewmodel
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.domain.domain.models.ContactUsForm
 import com.example.domain.domain.models.User
+import com.example.domain.domain.useCases.GetDestinationListUseCase
+import com.example.domain.domain.useCases.SendContactFormUseCase
 
-class ViewModel : ViewModel() {
+class MainViewModel(
+    getDestinationListUseCase: GetDestinationListUseCase,
+    sendContactFormUseCase: SendContactFormUseCase
+) : ViewModel() {
 
     private val wayLiveData = MutableLiveData<User>()
     val wayLive: LiveData<User> = wayLiveData
+    private var isDisabledLive = MutableLiveData<Boolean>()
+    val isDisabled : LiveData<Boolean> = isDisabledLive
 
     init {
+        isDisabledLive.value = true
         val user = User()
         wayLiveData.value = user
-        Log.e("ViewModel", "VM created")
+    }
+
+    fun setDisabled(boolean: Boolean){
+        isDisabledLive.value = boolean
     }
 
     override fun onCleared() {
-        Log.e("ViewModel", "VM cleared")
         super.onCleared()
     }
 
     fun pushChoice(choice: String) {
         wayLiveData.value!!.way.add(choice)
-        Log.e("VM", choice)
     }
 
     fun popChoiceUseCase() {
@@ -45,7 +53,4 @@ class ViewModel : ViewModel() {
         }
     }
 
-    fun getContactUsFormUseCase(): ContactUsForm {
-        return wayLiveData.value!!.contactUsForm
-    }
 }

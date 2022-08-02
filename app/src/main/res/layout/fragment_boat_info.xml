@@ -1,108 +1,107 @@
-<androidx.constraintlayout.widget.ConstraintLayout
-xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-tools:context=".presentation.boat.BoatInfo">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.boat.BoatInfo">
 
-<androidx.fragment.app.FragmentContainerView
-    android:id="@+id/destination_content_fragment_container"
-    android:name="com.example.luxdivetravel.presentation.boat.ContentBoatInfo"
-    android:layout_width="0dp"
-    android:layout_height="0dp"
-    android:layout_marginBottom="4dp"
-    android:fitsSystemWindows="true"
-    app:layout_constraintBottom_toTopOf="@+id/contact_us"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHeight_percent="0.615"
-    app:layout_constraintHorizontal_bias="0.0"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintVertical_bias="1.0"
-    app:layout_constraintWidth_percent="1" />
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/destination_content_fragment_container"
+        android:name="com.example.luxdivetravel.presentation.boat.ContentBoatInfo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="4dp"
+        android:fitsSystemWindows="true"
+        app:layout_constraintBottom_toTopOf="@+id/contact_us"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.615"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintWidth_percent="1" />
 
-<androidx.appcompat.widget.AppCompatButton
-    android:id="@+id/contact_us"
-    android:layout_width="0dp"
-    android:layout_height="0dp"
-    android:layout_marginBottom="4dp"
-    android:background="@drawable/destination_button"
-    android:text="@string/contact_us"
-    android:textColor="@color/white"
-    android:textSize="13sp"
-    app:flow_horizontalAlign="center"
-    app:flow_verticalAlign="bottom"
-    app:layout_constraintBottom_toTopOf="@+id/view_pager"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHeight_percent="0.06"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintWidth_percent="0.5" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/contact_us"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/destination_button"
+        android:text="@string/contact_us"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        app:flow_horizontalAlign="center"
+        app:flow_verticalAlign="bottom"
+        app:layout_constraintBottom_toTopOf="@+id/view_pager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.5" />
 
-<androidx.viewpager2.widget.ViewPager2
-    android:id="@+id/view_pager"
-    android:layout_width="0dp"
-    android:layout_height="0dp"
-    android:layout_marginBottom="2dp"
-    app:layout_constraintBottom_toTopOf="@+id/btn_facebook"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHeight_percent="0.26"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintWidth_percent="1">
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_facebook"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.26"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="1">
 
-</androidx.viewpager2.widget.ViewPager2>
+    </androidx.viewpager2.widget.ViewPager2>
 
     <ImageButton
         android:id="@+id/btn_home"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.05"
+        android:layout_height="33dp"
         android:layout_gravity="center"
         android:backgroundTint="@color/white"
         android:src="@drawable/ic_house"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view_pager" />
+        app:layout_constraintEnd_toStartOf="@+id/btn_instagram"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/btn_instagram"
         android:layout_width="50dp"
-        android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.05"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
+        android:layout_height="33dp"
         android:backgroundTint="@color/white"
         android:scaleType="centerCrop"
         android:src="@drawable/ic_instagram"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_facebook"
-        app:layout_constraintStart_toEndOf="@+id/btn_home"
-        app:layout_constraintTop_toBottomOf="@+id/view_pager" />
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_home" />
 
     <ImageButton
         android:id="@+id/btn_facebook"
         android:layout_width="50dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="50dp"
         android:backgroundTint="@color/white"
         android:scaleType="centerCrop"
         android:src="@drawable/ic_facebook"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_contact_us"
         app:layout_constraintHeight_percent="0.05"
-        app:layout_constraintHorizontal_bias="1"
-        app:layout_constraintStart_toEndOf="@+id/btn_home"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_instagram" />
 
     <ImageButton
         android:id="@+id/btn_contact_us"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.05"
+        android:layout_height="33dp"
         android:backgroundTint="@color/white"
         android:src="@drawable/ic_mail"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view_pager" />
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_facebook" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
